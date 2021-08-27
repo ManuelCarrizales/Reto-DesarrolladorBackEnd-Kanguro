@@ -108,8 +108,8 @@ class ShippingController extends Controller
     }
 
     //Función que se encarga de traer el registro del envio mediante el codigo de envio
-    public function getShippingByTrackingCode(Request $request){
-        $shipping = Shipping::where('tracking_code', $request->get('code'))->first();
+    public function getShippingByTrackingCode($code){
+        $shipping = Shipping::where('tracking_code', $code)->first();
         return $this->sendResponse($shipping, 'Envio recuperado correctamente');
     }
 

@@ -17,5 +17,5 @@ use Illuminate\Support\Facades\Route;
 
 //Rutas encargadas de hacer las peticiones via http
 Route::post('create_shipping',[ShippingController::class,'createShipping']);
-Route::post('shipping_by_tracking_code',[ShippingController::class,'getShippingByTrackingCode']);
+Route::get('shipping_by_tracking_code/{code}',[ShippingController::class,'getShippingByTrackingCode']);
 
